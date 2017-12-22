@@ -1,0 +1,170 @@
+* {
+    box-sizing:  border-box;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font-family: $font--main;
+    font-size: calc(12px + .278vw);
+    line-height: 1.5;
+}
+
+body {
+    background-color: #f7f9fb;
+    color: #36384c;
+    padding: 2em;
+}
+
+
+
+
+
+table {
+    background: #fff;
+    border: 0;
+    border-collapse: collapse;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .05);
+    margin: 1em auto;
+    width: 100%;
+}
+
+
+    thead {
+        th {
+            &:first-child {
+                border-top-left-radius: 10px;
+            }
+
+            &:last-child {
+                border-top-right-radius: 10px;
+            }
+        }
+    }
+
+    th {
+        color: #788d97;
+        font-weight: 600;
+        padding: 1em;
+        padding: .85em 1.25em;
+        text-align: left;
+    }
+
+
+    td {
+        padding: .5em 1.25em;
+    }
+
+
+    tr {
+        border-bottom: 1px solid #eef1f2;
+        border-bottom: 1px dashed #f0f0f0;
+    }
+
+
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                background-color: #fdfdfd;
+            }
+
+            &:hover {
+                background-color: #03a9f4;
+                color: #fff;
+            }
+        }
+    }
+
+
+
+
+
+.paginate {
+    text-align: center;
+
+    &__button {
+        cursor: pointer;
+    }
+
+    span,
+    strong {
+        display: inline-block;
+        padding: .25em;
+    }
+
+    strong {
+        color: #2b589a;
+    }
+}
+
+.filters {
+    margin-bottom: 2em;
+
+    &__limit {
+        float: right;
+
+        select {
+            margin: 0 .25em;
+        }
+    }
+
+    &__search {
+        min-width: 300px;
+    }
+}
+
+.sortable {
+    cursor: pointer;
+}
+
+.sorted {
+    color: #2b589a;
+    position: relative;
+
+    &:after {
+        background: url('../img/sort--asc.svg') center center no-repeat;
+        background-size: cover;
+        content: '';
+        height: .5em;
+        margin-left: .4em;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        width: .6em;
+    }
+
+    &--desc {
+        &:after {
+            background-image: url('../img/sort--desc.svg');
+        }
+    }
+}
+
+
+
+
+
+[type=date],
+[type=text],
+[type=password],
+select {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: .75em 1em;
+}
+
+select {
+    height: 2.5em;
+}
+
+
+
+
+
+[v-cloak] {
+    display: none;
+}
